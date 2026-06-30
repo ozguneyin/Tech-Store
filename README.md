@@ -1,217 +1,296 @@
-# 🛍️ TechStore - Teknoloji Ürünleri E-Ticaret Sitesi
+# 🛍️ Tech-Store - E-Commerce Platform
 
-Modern, profesyonel bir teknoloji ürünleri e-ticaret platformu. React, Vite ve Tailwind CSS ile geliştirilmiş, çerez-tabanlı sepet yönetimi ile kalıcı veri depolama sağlayan tam fonksiyonel bir SPA uygulaması.
+A modern, full-featured e-commerce platform for technology products built with React, Vite, and Tailwind CSS. This project demonstrates a production-ready SPA (Single Page Application) with cart management, product filtering, and a responsive design that works seamlessly across all devices.
 
-## ✨ Özellikler
+**Repository**: [github.com/ozguneyin/Tech-Store](https://github.com/ozguneyin/Tech-Store)
 
-### 🎯 Temel Özellikler
-- **Tek Sayfa Uygulaması (SPA)**: React Router ile hızlı sayfa geçişleri
-- **Modern Tasarım**: Koyu tema, elektrik mavisi/mor gradyanlar, glassmorphism efektleri
-- **Responsive Tasarım**: Mobil, tablet ve masaüstü için tam uyumlu
-- **Sepet Yönetimi**: Context API + js-cookie ile 7 günlük kalıcı depolama
+## ✨ Key Features
 
-### 📱 Sayfalar
-- **Anasayfa**: Hero banner, kategori kartları, öne çıkan ürünler
-- **Ürün Listeleme**: Gelişmiş filtreleme (kategori, fiyat aralığı, puan) ve sıralama
-- **Ürün Detayı**: Detaylı ürün bilgileri, galeri, benzer ürünler
-- **Sepet**: Ürün yönetimi, miktar kontrolü, sipariş özeti
+### 🎯 Core Features
+- **Single Page Application (SPA)**: Smooth navigation with React Router v7
+- **Modern Dark Theme**: Professional UI with electric blue/purple gradients and glassmorphism effects
+- **Fully Responsive**: Optimized for mobile, tablet, and desktop screens
+- **Persistent Cart**: Context API + js-cookie for 7-day data retention
+- **Fast Performance**: Vite for rapid development and optimized production builds
+- **Advanced Filtering**: Filter by category, price range, and ratings
+- **Smart Sorting**: Sort products by popularity, price, rating, and date added
 
-### 🛒 Sepet Sistemi
-- Ürün ekleme/çıkarma
-- Miktar kontrolü (+ / -)
-- Otomatik toplam hesaplama
-- Sayfa yenilendiğinde sepet verisi korunur
-- 7 günlük çerez ile persiste edilen veri
+### 📱 Main Pages
+- **🏠 Home**: Hero banner, category showcase, featured products, quick navigation
+- **📦 Products**: Advanced filtering, sorting, product grid with quick view
+- **🔍 Product Detail**: Full product info, image gallery, specs, similar products, reviews
+- **🛒 Shopping Cart**: Add/remove items, quantity control, order summary, checkout preview
+- **📋 Checkout**: Order review and payment interface
 
-### 🎨 UI/UX
-- Yumuşak gölgeler ve yuvarlatılmış köşeler
-- Hover animasyonları ve geçişler
-- Gradient başlıklar ve vurgular
-- Ürün stok durumu göstergesi
-- İndirim yüzdesi gösterimi
+### 🛒 Shopping Cart System
+- ✅ Add/remove products dynamically
+- ✅ Quantity controls with +/- buttons
+- ✅ Automatic total calculation
+- ✅ Cart persistence across browser sessions
+- ✅ 7-day cookie-based storage
+- ✅ Stock availability checks
+- ✅ Real-time cart updates
 
-## 🚀 Kurulum
+### 🎨 UI/UX Highlights
+- ✨ Smooth shadows and rounded corners
+- 🎬 Elegant hover animations and transitions
+- 🌈 Vibrant gradients and color accents
+- 📊 Stock status indicators
+- 🏷️ Discount percentage badges
+- 🔔 Toast notifications for user actions
+- 🌙 Dark mode optimized design
 
-### Gereksinimler
-- Node.js 16+ 
-- npm veya yarn
+## 🚀 Getting Started
 
-### Adımlar
+### Prerequisites
+- **Node.js**: 16 or higher
+- **npm**: v7+ or **yarn** v1.22+
+- Modern web browser
 
-1. **Projeyi klonlayın veya indirin**
+### Quick Start
+
+1. **Clone the repository**
 ```bash
-cd tech-store
+git clone https://github.com/ozguneyin/Tech-Store.git
+cd Tech-Store
 ```
 
-2. **Bağımlılıkları yükleyin**
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Geliştirme sunucusunu başlatın**
+3. **Start the development server**
 ```bash
 npm run dev
 ```
 
-4. **Tarayıcıda açın**
+4. **Open in browser**
 ```
 http://localhost:5173
 ```
 
-## 🛠️ Teknoloji Yığını
+The dev server features Hot Module Replacement (HMR) - changes automatically reflect in your browser.
 
-| Teknoloji | Versiyon | Kullanım |
-|-----------|----------|----------|
-| React | 19.2.7 | UI framework |
-| Vite | 8.1.2 | Build tool |
-| React Router | 7.x | Routing |
-| Tailwind CSS | 4.x | Styling (inline converted) |
-| lucide-react | - | İkonlar |
-| js-cookie | - | Çerez yönetimi |
+### Build for Production
+```bash
+npm run build
+```
 
-## 📁 Proje Yapısı
+### Preview Production Build
+```bash
+npm run preview
+```
+
+## 🛠️ Tech Stack
+
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **React** | 19.2.7 | Component-based UI framework |
+| **Vite** | 8.1.2 | Next-gen build tool & dev server |
+| **React Router** | 7.x | Client-side routing and navigation |
+| **Tailwind CSS** | 4.x | Utility-first CSS framework |
+| **lucide-react** | Latest | Beautiful icon library |
+| **js-cookie** | Latest | Client-side cookie management |
+| **PostCSS** | Latest | CSS transformation tool |
+
+## 📁 Project Structure
 
 ```
-tech-store/
+Tech-Store/
 ├── src/
-│   ├── components/          # React bileşenleri
-│   │   ├── Header.jsx      # Başlık/navbar
-│   │   ├── Footer.jsx      # Alt bilgi
-│   │   └── ProductCard.jsx # Ürün kartı
-│   ├── pages/              # Sayfa bileşenleri
-│   │   ├── Home.jsx        # Anasayfa
-│   │   ├── Products.jsx    # Ürün listesi
-│   │   ├── ProductDetail.jsx # Ürün detayı
-│   │   └── Cart.jsx        # Sepet
-│   ├── context/            # State yönetimi
-│   │   └── CartContext.jsx # Sepet context + çerez sync
-│   ├── utils/              # Yardımcı fonksiyonlar
-│   │   └── products.js     # Örnek ürün verisi
-│   ├── App.jsx             # Ana uygulama + Router
-│   ├── main.jsx            # Giriş noktası
-│   └── index.css           # Global stiller
-├── index.html              # HTML template
-├── package.json            # Bağımlılıklar
-├── vite.config.js          # Vite ayarları
-├── tailwind.config.js      # Tailwind ayarları
-└── postcss.config.js       # PostCSS ayarları
+│   ├── components/
+│   │   ├── Header.jsx          # Navigation bar with logo and cart
+│   │   ├── Footer.jsx          # Footer component
+│   │   ├── ProductCard.jsx     # Reusable product display card
+│   │   ├── ProductGrid.jsx     # Product grid layout
+│   │   ├── FilterSidebar.jsx   # Product filtering controls
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home.jsx            # Landing page
+│   │   ├── Products.jsx        # Product listing with filters
+│   │   ├── ProductDetail.jsx   # Single product detail view
+│   │   └── Cart.jsx            # Shopping cart page
+│   ├── context/
+│   │   └── CartContext.jsx     # Global cart state management
+│   ├── utils/
+│   │   └── products.js         # Sample product data
+│   ├── App.jsx                 # Main app component with routes
+│   ├── main.jsx                # Entry point
+│   └── index.css               # Global styles
+├── public/                     # Static assets
+├── index.html                  # HTML template
+├── package.json                # Project dependencies
+├── vite.config.js              # Vite configuration
+├── tailwind.config.js          # Tailwind configuration
+└── postcss.config.js           # PostCSS configuration
 ```
 
-## 🎮 Kullanım
+## 🎮 Usage Guide
 
-### Anasayfa
-- Kategori kartlarına tıklayarak ürün listesine filtrelenmiş şekilde gidin
-- "Öne Çıkan Ürünler" sekmesinde popüler ürünleri görün
+### Home Page
+- Browse featured products and categories
+- Click on category cards to see filtered products
+- Quick access to popular items
 
-### Ürün Listeleme
-- **Filtreleme**: Kategori, fiyat aralığı, puana göre filtreleyin
-- **Sıralama**: En popüler, en yeni, fiyat, puana göre sıralayın
-- **Ürün Seçimi**: Ürün kartına tıklayarak detaylarını görün
+### Product Listing
+- **Filter Products**: By category, price range, and customer ratings
+- **Sort Options**: By popularity, newest, price (low-high), and ratings
+- **Product Preview**: Hover or click cards to see quick details
 
-### Ürün Detayı
-- Ürün görseli ve detaylı açıklama
-- Teknik özellikler listesi
-- Miktar seçeci
-- "Sepete Ekle" butonu
-- Benzer ürünler önerileri
+### Product Details
+- **Full Product Info**: Description, specifications, and customer reviews
+- **Image Gallery**: Multiple product images with zoom capability
+- **Stock Status**: Real-time inventory information
+- **Similar Products**: Related product recommendations
+- **Add to Cart**: Quick add with quantity selector
 
-### Sepet
-- Sepetteki ürünleri görüntüleyin
-- Miktarını değiştirin
-- Ürünü kaldırın
-- Sipariş özetini görün
-- "Ödemeye Geç" butonuna tıklayın
+### Shopping Cart
+- **View Items**: See all products in your cart
+- **Modify Quantities**: Increase or decrease item quantities
+- **Remove Items**: Delete products from cart
+- **Order Summary**: View subtotal, taxes, and total
+- **Proceed to Checkout**: Review and finalize your order
 
-## 📊 Ürün Verisi
+## 📊 Sample Product Data
 
-20 adet örnek teknoloji ürünü (telefon, laptop, kulaklık, aksesuar vb.) içerir:
+The project includes 20+ sample technology products (phones, laptops, headphones, accessories, etc.):
 
 ```javascript
 {
   id: 1,
-  name: "Ürün Adı",
-  category: "Kategori",
-  price: 2999,
-  oldPrice: 3999,
-  image: "image-url",
+  name: "Product Name",
+  category: "Electronics",
+  price: 1299,
+  oldPrice: 1999,
+  image: "product-image-url",
   rating: 4.5,
-  stock: 10,
-  description: "Ürün açıklaması",
-  specs: [{label: "Özellik", value: "Değer"}]
+  stock: 15,
+  description: "Product description here",
+  specs: [
+    { label: "Display", value: "6.5 inch AMOLED" },
+    { label: "Memory", value: "8GB RAM" },
+    { label: "Storage", value: "256GB SSD" }
+  ]
 }
 ```
 
-## 🔄 Sepet Sistemi Detayları
+## 🔄 Cart System Architecture
 
-### CartContext Yapısı
+### CartContext Structure
 ```javascript
 {
-  cart: [...],              // Sepetteki ürünler
-  addToCart(product, qty),  // Ürün ekleme
-  removeFromCart(id),       // Ürün kaldırma
-  updateQuantity(id, qty),  // Miktar güncelleme
-  clearCart(),              // Sepeti temizleme
-  cartTotal,                // Toplam tutar
-  cartCount                 // Ürün sayısı
+  cart: [],                           // Array of cart items
+  addToCart(product, quantity),       // Add product to cart
+  removeFromCart(productId),          // Remove product from cart
+  updateQuantity(productId, qty),     // Update product quantity
+  clearCart(),                        // Clear all items
+  getCartTotal(),                     // Calculate total price
+  getCartCount()                      // Get total item count
 }
 ```
 
-### Çerez Yönetimi
-- **Anahtar**: `tech_store_cart`
-- **Format**: JSON array
-- **Süresi**: 7 gün
-- **Trigger**: Sepet değiştiğinde otomatik güncelleme
+### Cookie Management
+- **Key**: `tech_store_cart`
+- **Format**: JSON array of cart items
+- **Expiry**: 7 days
+- **Sync**: Automatic update on cart changes
 
-## 🎨 Renk Paleti
+## 🎨 Color Scheme
 
-| Renk | Değer | Kullanım |
-|------|-------|----------|
-| Koyu Arka Plan | `#0f172a` | Sayfa arka planı |
-| Kart Arka Planı | `#1e293b` | Bileşen arka planı |
-| Açık Metin | `#ffffff` | Ana metin |
-| Işık Metin | `#d1d5db` | İkincil metin |
-| Mor Vurgu | `#a855f7` | Gradiyen başlangıcı |
-| Mavi Vurgu | `#3b82f6` | Gradiyen sonu |
+| Color | Hex Value | Usage |
+|-------|-----------|-------|
+| Dark Background | `#0f172a` | Page background |
+| Card Background | `#1e293b` | Component background |
+| Light Text | `#ffffff` | Primary text |
+| Secondary Text | `#d1d5db` | Secondary text |
+| Purple Accent | `#a855f7` | Gradient start |
+| Blue Accent | `#3b82f6` | Gradient end |
 
-## 🚀 Derleme ve Deployment
+## 🚀 Build & Deployment
 
 ### Production Build
 ```bash
 npm run build
 ```
 
-### Preview
+Output is generated in the `dist/` folder as static files.
+
+### Preview Build Locally
 ```bash
 npm run preview
 ```
 
-Derleme sonucu `dist/` klasöründe statik dosyalar oluşturulur.
+This command builds and starts a local preview server.
 
-## 📝 Notlar
+### Deploy to Production
+The built files in `dist/` can be deployed to:
+- GitHub Pages
+- Vercel
+- Netlify
+- Any static hosting service
 
-- **Tailwind CSS**: Bazı Tailwind sınıfları inline stiller olarak yazılmıştır
-- **Çerez**: Tarayıcı çerezleri etkinleştirilmelidir
-- **Resimler**: Placeholder resimleri kullanılmaktadır
-- **Ödeme**: Ödeme sistemi UI sadece gösterimdir
+## 📝 Important Notes
 
-## 🔮 Gelecek Geliştirmeler
+- **Styling**: Tailwind CSS classes provide responsive design
+- **Browser Compatibility**: Works on all modern browsers (Chrome, Firefox, Safari, Edge)
+- **Images**: Uses placeholder images from external CDN
+- **Cart Storage**: Requires cookies enabled in browser
+- **No Backend**: This is a frontend-only demo (no server payment processing)
 
-- [ ] Gerçek ödeme entegrasyonu
-- [ ] Kullanıcı hesabı sistemi
-- [ ] Sipariş takibi
-- [ ] Ürün yorumları
-- [ ] Favoriler listesi
-- [ ] Arama işlevi
-- [ ] Tema değiştiricisi
+## 🔮 Future Enhancements
 
-## 📄 Lisans
+- [ ] 💳 Real payment gateway integration (Stripe, PayPal)
+- [ ] 👤 User authentication and account management
+- [ ] 📦 Order tracking and history
+- [ ] ⭐ Product reviews and ratings system
+- [ ] ❤️ Wishlist/Favorites feature
+- [ ] 🔎 Advanced search with autocomplete
+- [ ] 🌙 Dark/Light theme toggle
+- [ ] 📧 Email newsletter subscription
+- [ ] 📱 Mobile native app version
+- [ ] 🤖 AI-powered product recommendations
 
-MIT License
+## 🤝 Contributing
 
-## 👨‍💻 Geliştirici
+Contributions are welcome! Here's how to get started:
 
-Teknoloji Mağazası Frontend - 2026
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please ensure your PR:
+- Follows the existing code style
+- Includes meaningful commit messages
+- Adds tests for new features if applicable
+- Updates documentation as needed
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 About
+
+**Tech-Store** - E-Commerce Platform Demo - 2026
+
+- **Repository**: [github.com/ozguneyin/Tech-Store](https://github.com/ozguneyin/Tech-Store)
+- **Issues & Support**: [GitHub Issues](https://github.com/ozguneyin/Tech-Store/issues)
 
 ---
 
-**Not**: Bu proje eğitim amaçlı oluşturulmuştur. Gerçek bir e-ticaret platformu için ek güvenlik ve backend entegrasyonu gereklidir.
+### ⚠️ Important Disclaimer
+
+This project is created for **educational and demonstration purposes**. For a production e-commerce platform, the following are required:
+
+- ✅ Backend API with database (Node.js, Python, Java, etc.)
+- ✅ Secure payment processing (PCI DSS compliant)
+- ✅ User authentication and authorization
+- ✅ SSL/TLS encryption
+- ✅ GDPR and data privacy compliance
+- ✅ Regular security audits
+- ✅ Inventory management system
+- ✅ Order management and fulfillment
+
+**Use this as a learning resource and starting point for your own projects!**
